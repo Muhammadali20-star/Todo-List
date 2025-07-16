@@ -21,8 +21,8 @@ export default class Todos extends Component {
   
     if (updateItem) {
       this.setState({
-        data: data.map((item) =>
-          item.id === updateItem
+        data: this.state.data.map((item) =>
+          item.id === this.state.updateItem
             ? { ...item, FirstName, LastName, Email, Password, PhoneNumber }
             : item
         ),
